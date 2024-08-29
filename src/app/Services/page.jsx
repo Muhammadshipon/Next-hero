@@ -1,9 +1,9 @@
 import React from 'react';
 import { Headland_One } from 'next/font/google';
-import { redirect } from 'next/navigation';
+// import { redirect } from 'next/navigation';
 
 const getTime = async()=>{
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`,{next:{revalidate:5}});
+  const res = await fetch('http://localhost:3000/Time',{next:{revalidate:5}});
   const data = await res.json();
   // if(data){
   //   redirect('/Meals')
